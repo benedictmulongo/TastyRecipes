@@ -560,10 +560,10 @@ html {
     text-shadow: none;
 }
 
-::selection {
+/*::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+}*/
 
 /*
  * A better looking default horizontal rule
@@ -655,8 +655,6 @@ textarea {
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -675,8 +673,6 @@ textarea {
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
     height: auto;
     margin: 0;
     overflow: visible;
@@ -745,20 +741,20 @@ textarea {
 }
 @media only screen and (max-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
+
 }
 @media only screen and (max-height: 1920px) {
     /* Style adjustments for viewports that meet the condition */
+    .text {
+        display: grid; /* 1 */
+        grid-template-columns: 100px 1fr 100px; /* 2 */
+        grid-template-rows: 50vh; /* 3 */
+        margin-top: 2em;
+        margin-bottom: 50em;
+    }
 }
 
 
-
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
